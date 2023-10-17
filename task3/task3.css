@@ -1,0 +1,36 @@
+* {
+    font-family: 'Fira Sans', sans-serif;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    height: 2000px; 
+  }
+  
+p {
+    font-size: 20px;
+}
+  #scrollBtns {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .scrollBtn {
+    width: 40px;
+    height: 40px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+
+  .scrollBtn:hover {
+    background-color: #555;
+  }

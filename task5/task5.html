@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài 5 - Validate Form</title>
+    <link rel="stylesheet" href="task5.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="task5.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    
+    <fieldset>
+        <legend>Send Us A Message</legend>
+    <form id="myForm">
+        <div class="formGroup">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username"><br>
+        <span class="error" id="usernameError"></span><br>
+    </div>
+    <div class="formGroup">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"><br>
+        <span class="error" id="passwordError"></span><br>
+    </div>
+    <div class="formGroup">
+        <label for="repassword">Re-enter Password:</label>
+        <input type="password" id="repassword" name="repassword"><br>
+        <span class="error" id="repasswordError"></span><br>
+    </div>
+    <div class="formGroup">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br>
+        <span class="error" id="emailError"></span><br>
+    </div>
+    <div class="formGroup">
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone"><br>
+        <span class="error" id="phoneError"></span><br>
+    </div>
+        <input type="submit" value="Submit">
+    </form>
+    </fieldset>
+
+  </body>
+
+</html>
