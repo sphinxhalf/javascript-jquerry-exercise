@@ -93,7 +93,7 @@ html {
 
 button {
     position: absolute;
-    bottom: 10px; /* Adjust as needed to set the top position */
+    bottom  : 10px; /* Adjust as needed to set the top position */
     left: 10px; /* Adjust as needed to set the left position */
     padding: 10px 15px; /* Adjust padding as needed */
     background-color: #e6e6fa;; /* Background color of the button */
