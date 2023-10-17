@@ -3,31 +3,31 @@ $(document).ready(function () {
         // Prevent the form from submitting by default
         e.preventDefault();
 
+        // Remove any existing error messages
+        $('.error').text('').hide();
+
+        // Create an array to store validation errors
+        var errors = [];
+
         // Validation for username
         var username = $('#username').val();
         if (username.length < 5) {
             $('#usernameError').text('Username must be at least 5 characters').show();
-            return;
-        } else {
-            $('#usernameError').hide();
+            errors.push('Username must be at least 5 characters');
         }
 
         // Validation for password
         var password = $('#password').val();
         if (password.length < 5) {
             $('#passwordError').text('Password must be at least 5 characters').show();
-            return;
-        } else {
-            $('#passwordError').hide();
+            errors.push('Password must be at least 5 characters');
         }
 
         // Validation for re-entered password
         var repassword = $('#repassword').val();
         if (password !== repassword) {
             $('#repasswordError').text('Passwords do not match').show();
-            return;
-        } else {
-            $('#repasswordError').hide();
+            errors.push('Passwords do not match');
         }
 
         // Validation for email
@@ -35,9 +35,7 @@ $(document).ready(function () {
         var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
         if (!email.match(emailPattern)) {
             $('#emailError').text('Invalid email address').show();
-            return;
-        } else {
-            $('#emailError').hide();
+            errors.push('Invalid email address');
         }
 
         // Validation for phone number
@@ -45,12 +43,13 @@ $(document).ready(function () {
         var phonePattern = /^\d{10}$/; // Change this to match your phone number format
         if (!phone.match(phonePattern)) {
             $('#phoneError').text('Invalid phone number').show();
-            return;
-        } else {
-            $('#phoneError').hide();
+            errors.push('Invalid phone number');
         }
 
-        // If all validations pass, you can submit the form
-        alert('Form submitted successfully');
+        // Check if there are any validation errors
+        if (errors.length === 0) {
+            // If no errors, submit the form
+            alert('Form submitted successfully');
+        }
     });
 });
